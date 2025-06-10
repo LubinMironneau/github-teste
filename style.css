@@ -1,0 +1,330 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('./asset/Inter/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-left: calc(260px + 5.85vw);
+    padding-right:5.85vw;
+    padding-top: 155px;
+    overflow-x: hidden; 
+    background:rgb(252, 0, 0);
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    max-width: 260px;
+    min-width: 230px;
+    height: 100vh;
+    background: linear-gradient(to bottom, #449FD2 0%, #DDF0F6 18%);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#logo {
+    width: 157.95px;
+    height: 90px;
+    position: relative;
+    top: 20px;
+    left: 40px;
+    margin-bottom: 5vh;
+}
+
+.nav-links-container {
+    position: relative;
+    top: 120px;
+    margin-left: 10px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-content {
+    display: flex;
+    border-radius: 15px;
+    align-items: center;
+    flex: 1;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+.nav-content img {
+    max-width: 33px;
+    max-height: 33px;
+}
+
+.nav-icon {
+    margin-left: 10px;
+    margin-top: 8px;
+    align-self: flex-start;
+    display: none;
+}
+
+.nav-links p {
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+/* Style pour l'élément actif */
+.nav-links.active .nav-content {
+    background: linear-gradient(90deg, rgba(68, 139, 175, 0.5) 0%, rgba(68, 159, 210, 0.5) 41%);
+}
+
+.nav-links.active .nav-icon {
+    display: block;
+}
+
+/* Espacement spécifique pour catalogue */
+#catalogue {
+    margin-bottom: 9vh;
+}
+
+.limite {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 260px;
+    width: 5.85vw;
+    height: 100vh;
+}
+
+.limite-fondu {
+    width: 30%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0.3) 41%);
+}
+
+.limite-fondu-2 {
+    width: 30%;
+    height: 100%;
+    background: linear-gradient(to left, rgb(255, 255, 255), rgba(255, 255, 255, 0.3) 41%);
+}
+
+.limite-pasfondu {
+    width: 70%;
+    height: 100%;
+    background: #FFFFFF;
+}
+
+.limite-2 {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 5.85vw;
+    height: 100vh;
+}
+
+
+.top-bar {
+    display: flex;
+    z-index: 2;
+    position: absolute;
+    gap: 40px;
+    top: 40px;
+    right: 30px;
+}
+
+.top-icon {
+    width: 51px;
+    height: 51px;
+}
+
+.livraison {
+   margin-bottom: 10px;
+}
+
+.livraison-texte {
+    font-size: 1rem;
+    display: flex;
+    align-items: flex-end;
+    height: 25px;
+}
+
+.livraison-texte img {
+    width: 17px;
+    height: 17px;
+    align-self: flex-start;
+}
+
+
+
+.livraison-switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.filtre {
+    display: flex;
+    gap: 30px;
+    text-align: center;
+    color: #181818;
+    opacity: 0.9;
+    font-weight: 600;
+}
+
+.filtre-texte {
+    height: 42px;
+    min-width: 164px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    box-shadow: inset -1px -1px 3px 0px rgba(12, 12, 13, 0.5);
+    background: linear-gradient(-109deg, #FFFFFF 0%, #EEF3F7 0%, #FFFFFF 41%);
+    border-radius: 100px;
+    padding: 10px;
+}
+
+.deux-texte {
+    display: flex;
+    gap: 10px;
+}
+
+.container {
+    display: flex;
+    gap: 35px;
+    margin-top: 40px;
+}
+
+.type-produit {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 23px;
+    min-width: 199px;
+    height: 387px;
+    background: #f6f4f4;
+    box-shadow: 2px 4px 2px 0px rgba(0, 0, 0, 0.25);
+    border: 1px solid #C8C8C8;
+    border-radius: 15px;
+    position: relative;
+    padding: 20px 0;
+
+}
+
+.type-produit p {
+    font-weight: 600;
+    color: #181818;
+    opacity: 0.9;
+    margin-left: 15px;
+    z-index: 2;
+}
+
+.likee {
+    background-color: #449FD2;
+    opacity: 0.5;
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 14.5%;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#ceur {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 35px;
+    height: 40px;
+    z-index: 3;
+}
+
+.carte-produit {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 38px 45px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.carte {
+    width: 222px;
+    height: 330px;
+    background: #FCFDFE;
+    box-shadow: 4px 4px 4px 0px #9ECCDA;
+    border: 1px solid #C8C8C8;
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 3px 6px;
+
+}
+
+#image {
+    width: 150px;
+    height: 150px;
+    align-self: center;
+    margin-top: 10%;
+}
+
+.carte-texte {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    margin-top: 5%;
+    margin-bottom: 2%;
+
+}
+
+#titre {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+
+#prix {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#prix span {
+    font-size: 0.6rem;
+    font-weight: normal;
+}
+
+#caracteristique {
+    font-size: 0.9rem;
+}
+
+
+@media (max-width: 1200px) {
+    .top-icon {
+        width: 35px;
+        height: 35px;
+    }
+    .last-icon {
+        height: 35px;
+    }
+    .top-bar {
+        gap: 20px;
+    }
+}
